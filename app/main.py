@@ -1,29 +1,41 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List, Union
+
+from app.api.v1.endpoints import items, users
 
 app = FastAPI()
 
+
+
+
+
+# Routes
+app.include_router(items.router, prefix="/items", tags=["Items"])
+# app.include_router(users.router, prefix="/users", tags=["Users"])
+
+
+
+
+
+
+
 # Lista en memoria para almacenar los ítems
-items = []
+# items = []
 
-# Modelo Pydantic compatible con Python 3.9
-class Item(BaseModel):
-    name: str
-    description: Union[str, None] = None
-    price: float
-    tax: Union[float, None] = None
 
-# Endpoint POST para agregar un ítem
-@app.post("/items/")
-def create_item(item: Item):
-    items.append(item)
-    return item
 
-# Endpoint GET para listar todos los ítems
-@app.get("/items/", response_model=List[Item])
-def get_items():
-    return items
+
+
+# # Endpoint POST para agregar un ítem
+# @app.post("/items/")
+# def create_item(item: Item):
+#     items.append(item)
+#     return item
+
+# # Endpoint GET para listar todos los ítems
+# @app.get("/items/", response_model=List[Item])
+# def get_items():
+#     return items
 
 
 

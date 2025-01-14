@@ -6,5 +6,14 @@
 # Run
 ## source .venv/bin/activate
 
+# Create a sqlite database
+## python -m app.db.init_db
+
 # Launch app
 ## fastapi dev main.py
+
+
+
+
+
+

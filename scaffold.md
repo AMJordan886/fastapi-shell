@@ -1,3 +1,28 @@
+project/
+├── auth-service/
+│   ├── app/
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── main.py
+├── inventory-service/
+│   ├── app/
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── main.py
+├── payment-service/
+│   ├── app/
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── main.py
+├── docker-compose.yml
+└── gateway/
+    ├── app/
+    ├── requirements.txt
+    ├── Dockerfile
+    └── main.py
+
+
+
 .
 ├── app/
 │   ├── __init__.py

@@ -15,15 +15,16 @@ project/
 │   ├── Dockerfile
 │   └── main.py
 ├── docker-compose.yml
-└── gateway/
+└── integration-shell/
     ├── app/
-    ├── requirements.txt
-    ├── Dockerfile
-    └── main.py
+    ├── app/main.py
+    ├── alembic/
+    ├── alembic.ini
+    └── requirements.txt
 
 
 
-.
+
 ├── app/
 │   ├── __init__.py
 │   ├── main.py
@@ -67,3 +68,7 @@ project/
 │   ├── env.py
 │   ├── versions/
 └── docker-compose.yml         # Configuración Docker (opcional)
+
+
+
+

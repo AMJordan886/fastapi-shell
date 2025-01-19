@@ -4,6 +4,7 @@ from alembic import context
 
 from app.db.base import Base
 from app.models.item import Item
+from app.models.integration_log import IntegrationLog
 
 
 

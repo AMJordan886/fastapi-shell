@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from app.api.v1.endpoints import items, users
+# from app.api.v1.endpoints import items, users, integrations
+
+from app.api.routes.general import router as general_router
+from app.api.v1 import router as v1_router
+
 
 app = FastAPI()
 
@@ -10,10 +14,14 @@ app = FastAPI()
 
 
 # Routes
-app.include_router(items.router, prefix="/items", tags=["Items"])
+# app.include_router(items.router, prefix="/items", tags=["Items"])
 # app.include_router(users.router, prefix="/users", tags=["Users"])
 
 
+
+app.include_router(general_router, prefix="/", tags=["General"])
+# Rutas de la versión 1 de la API
+app.include_router(v1_router, prefix="/v1")
 
 
 

@@ -1,11 +1,23 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from app.db.session import get_db
+
+# from app.db.session import get_db
+from app.api.deps import get_db
+
 from app.crud.integration_log import create_integration_log, get_integrations_logs
 from app.schemas.integration_log import IntegrationLogCreate, IntegrationOut
 from typing import List
 
+
+
+
+
 router = APIRouter()
+
+
+
+
+
 
 
 @router.post("/", response_model=IntegrationOut)

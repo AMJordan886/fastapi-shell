@@ -4,8 +4,12 @@ sqlalchemy
 alembic
 
 pydantic>=2.0
+pydantic-settings
 
 typing-extensions
 
 pytest
 httpx
+
+
+python-dotenv

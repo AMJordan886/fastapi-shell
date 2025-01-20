@@ -12,16 +12,20 @@ app = FastAPI()
 
 
 
+app.include_router(general_router, prefix="", tags=["General"])
+# Rutas de la versión 1 de la API
+app.include_router(v1_router, prefix="/v1")
+
+
+
+
+
+
 
 # Routes
 # app.include_router(items.router, prefix="/items", tags=["Items"])
 # app.include_router(users.router, prefix="/users", tags=["Users"])
 
-
-
-app.include_router(general_router, prefix="/", tags=["General"])
-# Rutas de la versión 1 de la API
-app.include_router(v1_router, prefix="/v1")
 
 
 

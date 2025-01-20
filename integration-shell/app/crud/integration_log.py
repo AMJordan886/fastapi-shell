@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
 
 from app.models.integration_log import IntegrationLog
-from app.schemas.integration_log import LogIntegrationCreate
+from app.schemas.integration_log import IntegrationLogCreate
 
 
 
-def create_integration_log(db: Session, integration: LogIntegrationCreate):
+def create_integration_log(db: Session, integration: IntegrationLogCreate):
     db_integration = IntegrationLog(**integration.dict())
     db.add(db_integration)
     db.commit()
